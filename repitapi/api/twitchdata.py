@@ -25,7 +25,7 @@ class BaseTwitchObjectAPI(RepitAPI):
         if offset != 0:
             params['offset'] = offset
         response = self._request_get(self.path, params)
-        return [self.constructor(**x) for x in response['results']]
+        return [self.constructor(**x) for x in response]
 
     def get_object(self, pk):
         response = self._request_get(self.path + str(pk))
