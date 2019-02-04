@@ -6,4 +6,4 @@ setup(name='repitapi',
       author='Rodrigo Mendez',
       author_email='rodmendezp@gmail.com',
       packages=find_packages(),
-      zip_safe=False)
+      zip_safe=False, install_requires=['requests', 'djangorestframework'])
