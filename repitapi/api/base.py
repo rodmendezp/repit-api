@@ -29,6 +29,7 @@ class RepitAPI(object):
         headers = self._get_request_headers()
         response = requests.post(url, json=data, params=params, headers=headers)
         response.raise_for_status()
+        return response
 
     def _request_put(self, path, data=None, params=None, url=BASE_URL):
         url = urljoin(url, path)
